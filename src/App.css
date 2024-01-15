@@ -1,0 +1,132 @@
+html {
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-grayish-violet: hsl(270, 3%, 87%);
+    --color-dark-grayish-violet: hsl(279, 6%, 55%);
+    --color-very-dark-violet: hsl(278, 68%, 11%);
+
+    --site-width: 1440px;
+
+    --font-size: 18px;
+    
+    font-family: 'Space Grotesk';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.site-container {
+    max-width: var(--site-width);
+    height: min(1080px, 100vh);
+    margin: auto;
+
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 5rem;
+}
+.site-left {
+    width: 50%;
+    background: url('assets/images/bg-main-desktop.png') no-repeat;
+    background-size: 60% 100vh;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+    font-size: calc(var(--font-size) * 1.5);
+    letter-spacing: 0.25rem;
+}
+.card-back-image {
+    align-self: end;
+}
+
+.card-front-image {
+    position: relative;
+}
+.card-logo-image {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+.card-number {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    text-align: center;
+}
+.card-details {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    font-size: var(--font-size);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    letter-spacing: 0.15rem;
+}
+.card-back-image {
+    position: relative;
+}
+.card-cvv {
+    font-size: var(--font-size);
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(0%, -55%);
+}
+.site-right {
+    width: 50%;
+    border: 2px solid blue;
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    border: 2px solid tomato;
+}
+
+input {
+    display: block;
+    max-width: 600px;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.form-piece {
+    margin: 1rem;
+}
+
+form {
+    width: 100%;
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 800px){
+    .card-number {
+        font-size: calc(var(--font-size) * 1.15);
+    }
+    .card-details {
+        top: 75%;
+        font-size: calc(var(--font-size) * 0.75);
+    }
+}
+@media screen and (max-width: 650px){
+    .card-number {
+        font-size: calc(var(--font-size) * 0.85);
+    }
+}
+@media screen and (max-width: 550px){
+    /* TODO: GO MOBILE */
+
+}
